@@ -26,10 +26,10 @@ int main(){
     vector<int> arr = {1,2,3,4,5,6,7,8};
     int l = 2;
     int r = 5;
-    //cout<<rangeSumBrute(arr,l,r);
+    cout<<rangeSumBrute(arr,l,r);
     
 
-    vector<int>prefix =  buildPrefix(arr);
+    //vector<int>prefix =  buildPrefix(arr);
 
-    cout<<rangeSum(prefix,l,r);
+    //cout<<rangeSum(prefix,l,r);
 }
