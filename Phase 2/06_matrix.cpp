@@ -59,6 +59,43 @@ void print(vector<int> &result){
     }
 }
 
+
+
+// Transpose of a matrix ( for square matrix )
+
+void transpose(vector<vector<int>> & mat){
+    int n = mat.size();
+    for(int i =0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            swap(mat[i][j],mat[j][i]);
+        }
+    }
+    for(int i =0;i<n;i++){
+        for(int j=0;j<n;j++){
+            cout<<mat[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+
+// rotate matrix at 90 degree clockwise 
+
+void rotate90Clockwise(vector<vector<int>> & mat){
+        transpose(mat);
+        for(auto & it : mat){
+            reverse(it.begin(),it.end());
+
+        }
+        for(int i=0;i<mat.size();i++){
+            for(int j=0;j<mat.size();j++){
+                cout<<mat[i][j]<<" ";
+            }
+            cout<<endl;
+
+        }
+}
+
 int main(){
     vector<vector<int>> mat = {{1,2,3},{4,5,6},{7,8,9}};
     cout << "matrix is :"<<endl; 
@@ -67,7 +104,15 @@ int main(){
      vector<int> result1= spiralOrder(mat);
      cout<<"spiral traversal is : ";
      print(result1);
+    //  cout<<endl<<"transpose of matrix is : "<<endl;
+    //  transpose(mat);
+    cout<<endl<<"rotate at 90 cl"<<endl;
+    rotate90Clockwise(mat);
     
     
 
 }
+
+
+
+
