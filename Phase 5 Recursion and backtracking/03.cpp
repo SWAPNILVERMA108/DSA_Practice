@@ -46,3 +46,33 @@ void permuteSwap(vector<int>& arr, int idx , vector<vector<int>> & result){
 
 
 
+int main() {
+    vector<int> arr = {1, 2, 3};
+    vector<int> current;
+    vector<bool> used(arr.size(), false);
+    vector<vector<int>> result;
+
+    findPermutation(arr, current, used, result);
+
+    for (auto &p : result) {
+        for (int x : p) {
+            cout << x << " ";
+        }
+        cout << endl;
+    }
+
+    vector<vector<int>> result2;
+
+    permuteSwap(arr, 0, result2);
+
+    cout << "\nIn-place Swapping:\n";
+
+    for (auto &p : result2) {
+        for (int x : p) {
+            cout << x << " ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
